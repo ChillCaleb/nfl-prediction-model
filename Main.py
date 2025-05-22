@@ -1,6 +1,6 @@
-from strength_of_schedule import get_sos_info
-from predict import simulate_season
-from probability_models import MODEL_REGISTRY
+from Engine.strength_of_schedule import get_sos_info
+from Engine.predict import simulate_season
+from Engine.probability_models import MODEL_REGISTRY
 
 def main():
     print("🔄 Step 1: Calculating Strength of Schedule...")
