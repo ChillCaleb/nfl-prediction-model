@@ -32,13 +32,8 @@ TEAM_ABBR_MAP = {
 
 def scrape_and_save_basic_stats_for_all_teams(nfl_root="NFL"):
     table_wrappers = {
-        "all_passing": "passing",
         "all_rushing_and_receiving": "rushing_and_receiving",
-        "all_returns": "returns",
-        "all_kicking": "kicking",
-        "all_punting": "punting",
-        "all_defense": "defense",
-        "all_snap_counts": "snap_counts"
+
     }
 
     nfl_path = Path(nfl_root)
@@ -69,8 +64,8 @@ def scrape_and_save_basic_stats_for_all_teams(nfl_root="NFL"):
                             soup = BeautifulSoup(response.content, "html.parser")
 
                             for wrapper_id, filename in table_wrappers.items():
-                                print(f"\n⏳ Waiting 15 seconds before scraping: {filename}")
-                                time.sleep(15)
+                                print(f"\n⏳ Waiting 5 seconds before scraping: {filename}")
+                                time.sleep(5)
 
                                 table_html = find_table_by_wrapper(soup, wrapper_id)
                                 if table_html is None:
@@ -78,7 +73,16 @@ def scrape_and_save_basic_stats_for_all_teams(nfl_root="NFL"):
                                     continue
 
                                 df = pd.read_html(StringIO(str(table_html)))[0]
-                                df.columns = df.columns.map(str)
+
+                                # 🔧 Flatten headers safely
+                                if isinstance(df.columns, pd.MultiIndex):
+                                    df.columns = [
+                                        col[1] if "Unnamed" in col[0] else f"{col[0]} - {col[1]}"
+                                        for col in df.columns
+                                    ]
+                                else:
+                                    df.columns = df.columns.map(str)
+
                                 df = df[df.columns.dropna()]
                                 df = df[df[df.columns[0]] != df.columns[0]]
 

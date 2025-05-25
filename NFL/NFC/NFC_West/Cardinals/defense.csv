@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Budda Baker,28.0,FS,17,17,0,0,0,0,5,1,0,0,0,0,2.0,164,95,69,10,3,0,"PB,AP-2"
-2.0,Zaven Collins,25.0,LOLB,17,17,0,0,0,0,1,2,0,0,0,0,5.0,57,33,24,7,7,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Hjalte Froholdt,28.0,C,17,17,0,0,0,0,0,0,1,1,-5,0,0.0,0,0,0,0,0,0,
 4.0,Kyler Murray,27.0,QB,17,17,0,0,0,0,0,0,8,3,-4,0,0.0,0,0,0,0,0,0,AP CPoY-10
 5.0,Kyzir White,28.0,RILB,17,17,1,0,0,0,3,0,0,1,0,0,2.5,137,60,77,9,8,0,
@@ -48,3 +46,5 @@
 47.0,Xavier Thomas,25.0,OLB,14,0,0,0,0,0,1,1,0,0,0,0,2.5,10,6,4,2,4,0,
 48.0,Clayton Tune,25.0,QB,6,0,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,
 ,Team Totals,,,17,17,9,12,0,10,63,17,21,18,-9,2,41.0,1144,647,497,87,76,0,
+1.0,Budda Baker,28.0,FS,17,17,0,0,0,0,5,1,0,0,0,0,2.0,164,95,69,10,3,0,"PB,AP-2"
+2.0,Zaven Collins,25.0,LOLB,17,17,0,0,0,0,1,2,0,0,0,0,5.0,57,33,24,7,7,0,

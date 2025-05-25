@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Taliese Fuaga,22.0,LT,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
-2.0,Carl Granderson,28.0,RDE,17,17,0,0,0,0,4,1,0,0,0,0,5.5,61,36,25,9,13,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Cameron Jordan,35.0,LDE,17,17,1,0,0,0,4,0,0,0,0,0,4.0,34,18,16,7,8,0,
 4.0,Tyrann Mathieu,32.0,FS,17,17,3,29,0,23,7,2,0,1,0,0,0.0,62,47,15,1,0,0,
 5.0,Demario Davis,35.0,MLB,16,16,1,0,0,0,7,0,0,0,0,0,2.0,136,69,67,5,2,0,
@@ -50,3 +48,5 @@
 49.0,Zach Wood,31.0,LS,17,0,0,0,0,0,0,0,0,0,0,0,0.0,3,2,1,0,0,0,
 50.0,Chase Young,25.0,DE,17,0,0,0,0,0,3,1,0,0,0,0,5.5,31,21,10,8,21,0,
 ,Team Totals,,,17,17,14,169,0,47,93,12,16,10,-5,0,39.0,1166,716,450,77,84,0,
+2.0,Carl Granderson,28.0,RDE,17,17,0,0,0,0,4,1,0,0,0,0,5.5,61,36,25,9,13,0,
+1.0,Taliese Fuaga,22.0,LT,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,

@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Michael Jackson,27.0,RCB,17,17,2,20,0,19,17,0,0,0,0,0,0.0,76,58,18,3,0,0,
-2.0,Xavier Woods,29.0,FS,17,17,3,70,0,33,6,0,0,0,0,0,0.0,119,72,47,2,0,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,A'Shawn Robinson,29.0,RDE,16,16,0,0,0,0,1,1,0,0,0,0,5.5,80,43,37,8,8,0,
 4.0,Ikem Ekwonu,24.0,LT,15,15,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
 5.0,Jaycee Horn,25.0,LCB,15,15,1,0,0,0,13,0,0,0,0,0,2.0,68,49,19,5,2,0,PB
@@ -57,3 +55,5 @@
 56.0,Jammie Robinson,23.0,S,6,0,0,0,0,0,0,0,0,0,0,0,0.0,3,2,1,0,0,0,
 57.0,T.J. Smith,27.0,DT,3,0,0,0,0,0,0,0,0,0,0,0,0.0,2,0,2,0,0,0,
 ,Team Totals,,,17,17,9,96,0,33,68,8,17,15,2,0,32.0,1275,709,566,65,64,0,
+1.0,Michael Jackson,27.0,RCB,17,17,2,20,0,19,17,0,0,0,0,0,0.0,76,58,18,3,0,0,
+2.0,Xavier Woods,29.0,FS,17,17,3,70,0,33,6,0,0,0,0,0,0.0,119,72,47,2,0,0,

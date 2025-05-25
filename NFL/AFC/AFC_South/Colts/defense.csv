@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Nick Cross,23.0,SS,17,17,3,25,0,20,5,1,0,0,0,0,1.0,146,87,59,6,1,0,
-2.0,Zaire Franklin,28.0,LLB,17,17,2,4,0,4,6,5,0,0,0,0,3.5,173,93,80,11,4,0,"PB,AP-2,AP DPoY-17"
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Jaylon Jones,22.0,LCB,17,17,2,5,0,5,12,1,0,0,0,0,0.0,100,66,34,3,0,0,
 4.0,Grover Stewart,31.0,NT,17,17,0,0,0,0,3,1,0,1,0,0,3.5,74,29,45,10,6,0,
 5.0,Julian Blackmon,26.0,FS,16,16,3,27,0,17,4,0,0,1,0,0,0.5,86,62,24,1,1,0,
@@ -10,7 +8,6 @@
 9.0,Dayo Odeyingbo,25.0,RDE,17,14,0,0,0,0,0,2,0,1,0,0,3.0,31,13,18,7,17,0,
 10.0,Michael Pittman Jr.,27.0,WR,16,14,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,
 11.0,Jonathan Taylor,25.0,RB,14,13,0,0,0,0,0,0,4,1,0,0,0.0,0,0,0,0,0,0,"PB,AP CPoY-19"
-12.0,DeForest Buckner,30.0,DT,12,11,0,0,0,0,1,0,0,0,0,0,6.5,61,24,37,8,14,0,
 13.0,Anthony Richardson,22.0,QB,11,11,0,0,0,0,0,0,9,6,-14,0,0.0,0,0,0,0,0,0,AP CPoY-25
 14.0,Josh Downs,23.0,WR,14,8,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
 15.0,Samuel Womack,25.0,CB,17,8,2,4,0,4,9,0,0,0,0,0,0.0,36,26,10,0,0,0,
@@ -43,3 +40,6 @@
 42.0,Segun Olubi,25.0,LB,17,0,0,0,0,0,0,1,0,1,18,0,0.0,12,6,6,0,0,0,
 43.0,Luke Rhodes,32.0,LS,17,0,0,0,0,0,0,0,0,0,0,0,0.0,2,2,0,0,0,0,
 ,Team Totals,,,17,17,16,105,0,20,57,18,20,18,45,1,36.0,1233,737,496,88,83,0,
+12.0,DeForest Buckner,30.0,DT,12,11,0,0,0,0,1,0,0,0,0,0,6.5,61,24,37,8,14,0,
+1.0,Nick Cross,23.0,SS,17,17,3,25,0,20,5,1,0,0,0,0,1.0,146,87,59,6,1,0,
+2.0,Zaire Franklin,28.0,LLB,17,17,2,4,0,4,6,5,0,0,0,0,3.5,173,93,80,11,4,0,"PB,AP-2,AP DPoY-17"

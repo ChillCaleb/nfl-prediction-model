@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,John Jenkins,35.0,LDT,17,17,0,0,0,0,2,0,0,0,0,0,1.0,46,13,33,3,4,0,
-2.0,Kolton Miller,29.0,LT,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Tre'von Moehrig,25.0,SS,17,17,2,28,0,16,10,0,0,2,0,0,1.0,104,64,40,5,3,0,
 4.0,Robert Spillane,29.0,MLB,17,17,2,0,0,0,7,0,0,0,0,0,2.0,158,91,67,10,3,0,
 5.0,Adam Butler,30.0,RDT,17,16,0,0,0,0,2,1,0,0,0,0,5.0,65,36,29,8,10,0,
@@ -47,3 +45,5 @@
 46.0,Christopher Smith,24.0,S,15,0,0,0,0,0,0,0,0,0,0,0,0.0,6,2,4,0,0,0,
 47.0,Sam Webb,26.0,CB,11,0,0,0,0,0,0,0,0,0,0,0,0.0,1,0,1,0,0,0,
 ,Team Totals,,,17,17,10,130,1,35,81,6,18,7,-22,0,37.0,1109,638,471,83,86,0,
+1.0,John Jenkins,35.0,LDT,17,17,0,0,0,0,2,0,0,0,0,0,1.0,46,13,33,3,4,0,
+2.0,Kolton Miller,29.0,LT,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,

@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Jake Brendel,32.0,C,17,17,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,
-2.0,Maliek Collins,29.0,LDT,17,17,0,0,0,0,0,0,0,2,0,0,5.0,33,20,13,5,12,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Leonard Floyd,32.0,RDE,17,17,0,0,0,0,1,1,0,0,0,0,8.5,42,25,17,8,16,0,
 4.0,Fred Warner,28.0,MLB,17,17,2,70,1,45,7,4,0,0,0,0,1.0,131,76,55,5,2,0,"PB,AP-1"
 5.0,Kyle Juszczyk,33.0,FB,17,15,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,"PB,AP-2"
@@ -56,3 +54,5 @@
 55.0,Matthew Wright,28.0,K,1,0,0,0,0,0,0,0,0,0,0,0,0.0,1,1,0,0,0,0,
 56.0,Rock Ya-Sin,28.0,CB,13,0,0,0,0,0,2,0,0,0,0,0,0.0,3,3,0,0,0,0,
 ,Team Totals,,,17,17,11,167,1,45,72,13,26,18,-13,0,36.0,1066,648,418,67,80,0,
+1.0,Jake Brendel,32.0,C,17,17,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,
+2.0,Maliek Collins,29.0,LDT,17,17,0,0,0,0,0,0,0,2,0,0,5.0,33,20,13,5,12,0,

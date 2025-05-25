@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Josh Allen,28.0,QB,17,17,0,0,0,0,0,0,5,1,0,0,0.0,0,0,0,0,0,0,"PB,AP-2,AP MVP-1,AP OPoY-6"
-2.0,James Cook,25.0,RB,16,16,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,PB
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,DaQuan Jones,33.0,RDT,16,16,0,0,0,0,1,0,0,0,0,0,2.5,23,11,12,5,7,0,
 4.0,Gregory Rousseau,24.0,RDE,16,16,0,0,0,0,3,3,0,1,0,0,8.0,53,36,17,16,24,0,
 5.0,O'Cyrus Torrence,24.0,RG,17,16,0,0,0,0,0,0,0,2,0,0,0.0,0,0,0,0,0,0,
@@ -30,7 +28,6 @@
 29.0,Austin Johnson,30.0,DT,15,1,2,9,0,5,2,0,0,0,0,0,0.5,19,7,12,0,1,0,
 30.0,Ty Johnson,27.0,RB,17,1,0,0,0,0,0,0,0,1,0,0,0.0,5,5,0,0,0,0,
 31.0,Casey Toohill,28.0,DE,14,1,0,0,0,0,1,0,0,1,0,0,1.0,20,9,11,2,1,0,
-32.0,Edefuan Ulofoshio,24.0,LB,4,1,0,0,0,0,1,0,0,0,0,0,0.0,6,5,1,1,0,0,
 33.0,Eli Ankou,30.0,DT,2,0,0,0,0,0,0,0,0,0,0,0,0.0,5,1,4,0,0,0,
 34.0,Tyler Bass,27.0,K,17,0,0,0,0,0,0,0,0,0,0,0,0.0,1,1,0,0,0,0,
 35.0,Brandon Codrington,24.0,DB,17,0,0,0,0,0,1,0,2,1,0,0,0.0,9,8,1,0,0,0,
@@ -47,3 +44,6 @@
 46.0,Mitchell Trubisky,30.0,QB,9,0,0,0,0,0,0,0,1,1,0,0,0.0,0,0,0,0,0,0,
 47.0,Jalen Virgil,26.0,WR,7,0,0,0,0,0,0,0,0,1,0,0,0.0,2,2,0,0,0,0,
 ,Team Totals,,,17,17,16,145,2,31,60,18,11,24,43,1,37.0,1124,697,427,93,93,1,
+32.0,Edefuan Ulofoshio,24.0,LB,4,1,0,0,0,0,1,0,0,0,0,0,0.0,6,5,1,1,0,0,
+2.0,James Cook,25.0,RB,16,16,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,PB
+1.0,Josh Allen,28.0,QB,17,17,0,0,0,0,0,0,5,1,0,0,0.0,0,0,0,0,0,0,"PB,AP-2,AP MVP-1,AP OPoY-6"

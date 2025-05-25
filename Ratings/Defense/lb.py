@@ -1,64 +1,80 @@
-import sqlite3
 import pandas as pd
 
-def flatten_columns(df):
-    df.columns = [f"{c[0]}_{c[1]}".strip(" _") if isinstance(c, tuple) else c for c in df.columns]
-    return df
-
-def rate_lb(team: str, db_path: str, verbose=False) -> float:
-    table_name = f"team_{team.lower()}_defense"
-    adv_table = f"team_{team.lower()}_advanced_defense"
-
-    conn = sqlite3.connect(db_path)
-
-    try:
-        df = pd.read_sql_query(f"SELECT * FROM {table_name}", conn)
-        adv_df = pd.read_sql_query(f"SELECT * FROM {adv_table}", conn)
-        conn.close()
-
-        if df.empty and adv_df.empty:
+def rate_lb(lb_row, adv_row=None, snap_count=None, pressures=None, targets=None, completions=None, tfl=None, bonus=True, verbose=False):
+    def get_val(row, col):
+        try:
+            val = row[col] if col in row else 0
+            if isinstance(val, pd.Series):
+                val = val.values[0]
+            return float(val)
+        except:
             return 0.0
 
-        df = flatten_columns(df)
-        df = df.fillna(0)
-        adv_df = adv_df.fillna(0)
+    try:
+        if verbose:
+            print(f"📥 rate_lb() received snap_count = {snap_count}, pressures = {pressures}, targets = {targets}, completions = {completions}, TFL = {tfl}")
 
-        def get_val(df, col):
-            return pd.to_numeric(df[col], errors='coerce').mean() if col in df else 0.0
+        # Fallbacks if not passed
+        snap_count = float(snap_count if snap_count is not None else get_val(lb_row, "def_num"))
+        pressures = float(pressures if pressures is not None else get_val(lb_row, "Pressures"))
+        targets = float(targets if targets is not None else get_val(lb_row, "Tgt"))
+        completions = float(completions if completions is not None else get_val(lb_row, "Cmp"))
+        tfl = float(tfl if tfl is not None else get_val(lb_row, "TFL"))
 
-        # Pull values from both tables
-        comb = get_val(df, "Tackles_Comb")
-        solo = get_val(df, "Tackles_Solo")
-        tfl = get_val(df, "Tackles_TFL")
-        qbhits = get_val(df, "Tackles_QBHits")
-
-        blitz = get_val(adv_df, "Bltz")
-        hrry = get_val(adv_df, "Hrry")
-        qbkd = get_val(adv_df, "QBKD")
-        missed_pct = get_val(adv_df, "MTkl%")
-        interceptions = get_val(adv_df, "Int")
-        passes_defended = get_val(adv_df, "Cmp%")  # inverse of completion % as proxy
-
-        rating = (
-            0.2 * (comb / 120.0) +
-            0.1 * (solo / 80.0) +
-            0.15 * (tfl / 12.0) +
-            0.10 * (qbhits / 15.0) +
-            0.10 * (blitz / 25.0) +
-            0.10 * (hrry / 20.0) +
-            0.10 * (qbkd / 10.0) +
-            0.05 * (interceptions / 5.0) -
-            0.10 * (missed_pct / 25.0)
-        ) * 100
-
-        rating = round(rating, 2)
+        completion_rate = (completions / targets) * 100 if targets > 0 else 0.0
 
         if verbose:
-            print(f"LB Rating: {rating}")
+            print(f"🔍 Snap = {snap_count}, Pressures = {pressures}, Targets = {targets}, Completions = {completions}, TFL = {tfl}")
+            print(f"📊 Completion Rate = {completion_rate:.1f}%")
 
-        return rating
+        # Archetype assignment
+        archetype = "Balanced"
+        if pressures >= 10:
+            archetype = "Blitzer"
+        elif targets >= 20 and completion_rate < 60:
+            archetype = "Coverage"
+
+        if verbose:
+            print(f"🧬 Archetype: {archetype}")
+
+        # Stats used for scoring
+        ints = get_val(lb_row, "Int")
+        pd_def = get_val(lb_row, "PD")
+        tackles = get_val(lb_row, "Comb")
+        missed_tackles = get_val(lb_row, "MTkl")
+        sacks = get_val(lb_row, "Sk")
+
+        # Base scoring system
+        tackle_score = tackles * 0.5 - missed_tackles * 1.0
+        sack_score = sacks * 1.5
+        int_score = ints * 2
+        pd_score = pd_def * 1.5
+        tfl_score = tfl * 1.2
+
+        base_score = tackle_score + sack_score + int_score + pd_score + tfl_score
+
+        # Coverage penalty if LB is bad in coverage
+        coverage_penalty = 0
+        if targets >= 20 and completion_rate > 60:
+            coverage_penalty = (completion_rate - 60) * 0.5
+            if verbose:
+                print(f"🚫 Coverage penalty = {coverage_penalty:.2f}")
+
+        # TFL penalty for ineffective balanced LBs
+        tfl_penalty = 0
+        if archetype == "Balanced" and tfl < 8:
+            tfl_penalty = 10
+            if verbose:
+                print(f"⚠️ Ineffective Balanced LB penalty = {tfl_penalty}")
+
+        total_score = base_score - coverage_penalty - tfl_penalty
+
+        if verbose:
+            print(f"🧮 Final Score Breakdown: Base = {base_score:.2f}, Coverage Penalty = {coverage_penalty:.2f}, TFL Penalty = {tfl_penalty}, Total = {total_score:.2f}")
+
+        return round(total_score, 2)
 
     except Exception as e:
         if verbose:
-            print(f"[LB RATING ERROR] {e}")
+            print(f"❌ Error in rate_lb: {e}")
         return 0.0

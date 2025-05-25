@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Jack Campbell,24.0,MLB,17,17,0,0,0,0,5,1,0,0,0,0,1.5,131,69,62,5,5,0,
-2.0,Jared Goff,30.0,QB,17,17,0,0,0,0,0,0,6,2,0,0,0.0,0,0,0,0,0,0,"PB,AP MVP-5,AP OPoY-9"
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Kerby Joseph,24.0,FS,17,17,9,99,1,33,12,0,0,0,0,0,0.0,83,58,25,1,1,0,"AP-1,AP DPoY-6"
 4.0,Amon-Ra St. Brown,25.0,WR,17,17,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,"PB,AP-1,AP OPoY-11"
 5.0,Brian Branch,23.0,SS,16,16,4,48,0,47,16,1,0,0,0,0,1.0,109,79,30,8,6,0,PB
@@ -52,3 +50,5 @@
 51.0,Sione Vaki,23.0,RB,16,0,0,0,0,0,0,1,0,0,0,0,0.0,8,8,0,0,0,0,
 52.0,Mekhi Wingo,21.0,DL,11,0,0,0,0,0,0,0,0,0,0,0,0.0,9,1,8,0,1,0,
 ,Team Totals,,,17,17,16,155,1,47,81,13,12,16,48,0,37.0,967,624,343,70,109,0,
+1.0,Jack Campbell,24.0,MLB,17,17,0,0,0,0,5,1,0,0,0,0,1.5,131,69,62,5,5,0,
+2.0,Jared Goff,30.0,QB,17,17,0,0,0,0,0,0,6,2,0,0,0.0,0,0,0,0,0,0,"PB,AP MVP-5,AP OPoY-9"

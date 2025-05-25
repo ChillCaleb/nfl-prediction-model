@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Jessie Bates III,27.0,SS,17,17,4,55,1,55,10,4,0,1,0,0,1.0,102,62,40,2,1,0,
-2.0,Matthew Bergeron,24.0,LG,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Kaden Elliss,29.0,RILB,17,17,1,12,0,12,3,1,0,1,0,0,5.0,151,85,66,8,16,0,
 4.0,Grady Jarrett,31.0,LDE,17,17,0,0,0,0,0,0,0,0,0,0,2.5,53,30,23,9,12,0,
 5.0,Drake London,23.0,WR,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
@@ -46,3 +44,5 @@
 45.0,Avery Williams,26.0,RB,17,0,0,0,0,0,0,0,0,0,0,0,0.0,6,2,4,0,0,0,
 46.0,Josh Woods,28.0,LB,5,0,0,0,0,0,0,0,0,0,0,0,0.0,1,1,0,0,0,0,
 ,Team Totals,,,17,17,12,187,3,55,66,12,21,19,-38,1,31.0,1126,681,445,79,74,1,
+1.0,Jessie Bates III,27.0,SS,17,17,4,55,1,55,10,4,0,1,0,0,1.0,102,62,40,2,1,0,
+2.0,Matthew Bergeron,24.0,LG,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,

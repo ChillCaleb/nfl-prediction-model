@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Nick Allegretti,28.0,LG,17,17,0,0,0,0,0,0,0,2,0,0,0.0,0,0,0,0,0,0,
-2.0,Jeremy Chinn,26.0,FS,17,17,1,0,0,0,5,1,0,2,0,0,2.0,117,73,44,7,3,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Jayden Daniels,24.0,QB,17,17,0,0,0,0,0,0,5,0,-11,0,0.0,0,0,0,0,0,0,"PB,AP MVP-7,AP OPoY-17,AP ORoY-1"
 4.0,Zach Ertz,34.0,TE,17,17,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,AP CPoY-17
 5.0,Frankie Luvu,28.0,RLB,17,17,1,0,0,0,7,1,0,2,5,0,8.0,99,54,45,12,14,0,AP-2
@@ -50,3 +48,5 @@
 49.0,Mykal Walker,27.0,OLB,17,0,0,0,0,0,0,0,0,2,0,0,0.0,21,8,13,0,0,0,
 50.0,Colson Yankoff,24.0,TE,6,0,0,0,0,0,0,0,0,0,0,0,0.0,4,2,2,0,0,0,
 ,Team Totals,,,17,17,7,153,1,67,60,16,20,21,-4,0,43.0,1143,666,477,86,88,0,
+2.0,Jeremy Chinn,26.0,FS,17,17,1,0,0,0,5,1,0,2,0,0,2.0,117,73,44,7,3,0,
+1.0,Nick Allegretti,28.0,LG,17,17,0,0,0,0,0,0,0,2,0,0,0.0,0,0,0,0,0,0,

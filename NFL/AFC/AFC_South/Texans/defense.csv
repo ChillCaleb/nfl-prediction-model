@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Danielle Hunter,30.0,RDE,17,17,0,0,0,0,3,1,0,0,0,0,12.0,46,31,15,17,23,0,"PB,AP DPoY-22"
-2.0,Derek Stingley Jr.,23.0,LCB,17,17,5,48,0,31,18,0,0,0,0,0,0.0,54,37,17,4,0,0,"PB,AP-1,AP DPoY-17"
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,C.J. Stroud,23.0,QB,17,17,0,0,0,0,0,0,6,1,-4,0,0.0,0,0,0,0,0,0,
 4.0,Tytus Howard,28.0,RT,16,16,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
 5.0,Henry To'oTo'o,23.0,LLB,15,15,1,0,0,0,3,1,0,0,0,0,1.5,105,54,51,7,1,0,
@@ -48,3 +46,5 @@
 47.0,Tommy Togiai,25.0,DT,8,0,0,0,0,0,2,0,0,0,0,0,1.5,28,11,17,2,2,0,
 48.0,Russ Yeast,25.0,S,1,0,0,0,0,0,0,0,0,0,0,0,0.0,1,1,0,0,0,0,
 ,Team Totals,,,17,17,19,275,1,68,90,11,14,13,62,2,49.0,1043,661,382,106,98,1,
+1.0,Danielle Hunter,30.0,RDE,17,17,0,0,0,0,3,1,0,0,0,0,12.0,46,31,15,17,23,0,"PB,AP DPoY-22"
+2.0,Derek Stingley Jr.,23.0,LCB,17,17,5,48,0,31,18,0,0,0,0,0,0.0,54,37,17,4,0,0,"PB,AP-1,AP DPoY-17"

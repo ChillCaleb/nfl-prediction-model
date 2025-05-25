@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Davon Godchaux,30.0,NT,17,17,0,0,0,0,1,0,0,0,0,0,0.0,67,24,43,1,1,0,
-2.0,Michael Onwenu,27.0,RG,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Daniel Ekuale,30.0,RDE,16,16,0,0,0,0,0,0,0,0,0,0,1.0,52,24,28,2,3,0,
 4.0,Christian Gonzalez,22.0,RCB,16,16,2,2,0,2,11,0,0,1,63,1,0.0,59,50,9,1,1,0,"AP-2,AP CPoY-5"
 5.0,Anfernee Jennings,27.0,ROLB,16,16,0,0,0,0,1,1,0,0,0,0,2.5,78,43,35,7,9,0,
@@ -50,3 +48,5 @@
 49.0,Marco Wilson,25.0,CB,10,0,0,0,0,0,1,0,0,0,0,0,0.0,15,8,7,0,0,0,
 50.0,Oshane Ximines,28.0,OLB,2,0,0,0,0,0,0,0,0,0,0,0,0.0,1,0,1,0,0,0,
 ,Team Totals,,,17,17,7,49,0,35,73,14,30,22,52,1,28.0,1157,665,492,62,66,0,
+1.0,Davon Godchaux,30.0,NT,17,17,0,0,0,0,1,0,0,0,0,0,0.0,67,24,43,1,1,0,
+2.0,Michael Onwenu,27.0,RG,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,

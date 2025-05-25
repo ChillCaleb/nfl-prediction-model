@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Kevin Byard,31.0,SS,17,17,1,0,0,0,7,1,0,2,0,0,2.0,130,80,50,5,2,0,
-2.0,Tremaine Edmunds,26.0,MLB,17,17,1,0,0,0,8,1,0,0,0,0,1.0,110,60,50,3,3,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,T.J. Edwards,28.0,LLB,17,17,1,0,0,0,3,1,0,2,0,0,4.0,129,79,50,12,6,0,
 4.0,Jaylon Johnson,25.0,RCB,17,17,2,11,0,9,8,1,0,0,0,0,0.0,53,42,11,7,0,0,PB
 5.0,D.J. Moore,27.0,WR,17,17,0,0,0,0,0,0,1,1,0,0,0.0,0,0,0,0,0,0,
@@ -48,3 +46,5 @@
 47.0,Reddy Steward,23.0,CB,1,0,0,0,0,0,0,1,0,0,0,0,0.0,1,1,0,0,0,0,
 48.0,Darrell Taylor,27.0,DL,16,0,0,0,0,0,2,2,0,0,0,0,3.0,32,20,12,3,9,0,
 ,Team Totals,,,17,17,11,87,1,43,66,16,19,22,34,0,40.0,1142,695,447,81,100,0,
+1.0,Kevin Byard,31.0,SS,17,17,1,0,0,0,7,1,0,2,0,0,2.0,130,80,50,5,2,0,
+2.0,Tremaine Edmunds,26.0,MLB,17,17,1,0,0,0,8,1,0,0,0,0,1.0,110,60,50,3,3,0,

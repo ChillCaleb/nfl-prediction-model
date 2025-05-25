@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Harold Landry,28.0,ROLB,17,17,0,0,0,0,4,0,0,0,0,0,9.0,71,42,29,15,15,1,
-2.0,JC Latham,21.0,LT,17,17,0,0,0,0,0,0,0,3,4,0,0.0,0,0,0,0,0,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Tony Pollard,27.0,RB,16,16,0,0,0,0,0,0,2,1,0,0,0.0,0,0,0,0,0,0,
 4.0,Jeffery Simmons,27.0,DT,16,16,0,0,0,0,4,2,0,2,0,0,5.0,76,41,35,11,9,0,PB
 5.0,T'Vondre Sweat,23.0,NT,17,16,0,0,0,0,1,1,0,1,30,0,1.0,51,22,29,4,3,0,AP DRoY-12
@@ -52,3 +50,5 @@
 51.0,Caleb Murphy,25.0,OLB,2,0,0,0,0,0,0,0,0,0,0,0,0.0,1,1,0,0,0,0,
 52.0,Julius Wood,23.0,S,9,0,0,0,0,0,0,0,0,0,0,0,0.0,2,1,1,0,0,0,
 ,Team Totals,,,17,17,11,86,0,30,53,10,28,21,5,0,32.0,1127,683,444,92,67,1,
+1.0,Harold Landry,28.0,ROLB,17,17,0,0,0,0,4,0,0,0,0,0,9.0,71,42,29,15,15,1,
+2.0,JC Latham,21.0,LT,17,17,0,0,0,0,0,0,0,3,4,0,0.0,0,0,0,0,0,0,

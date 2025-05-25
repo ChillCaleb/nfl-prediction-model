@@ -39,7 +39,6 @@ def calculate_passing_offense(qb, ol, wr1, wr2, te):
 def calculate_offensive_profile(team, db_path):
     conn = sqlite3.connect(db_path)
     try:
-        # Load all player-level tables
         p = lambda tbl: pd.read_sql_query(f"SELECT * FROM team_{team}_{tbl};", conn)
         passing_df = p("passing")
         adv_pass_df = p("advanced_passing")
@@ -47,7 +46,6 @@ def calculate_offensive_profile(team, db_path):
         combo_df = p("rushing_and_receiving")
         adv_recv_df = p("advanced_receiving")
 
-        # Select specific players
         qb_name = passing_df.iloc[0]["Player"]
         rb_name = adv_rush_df[adv_rush_df["Pos"] == "RB"].iloc[0]["Player"]
         wr_df = adv_recv_df[adv_recv_df["Pos"] == "WR"]
@@ -56,7 +54,6 @@ def calculate_offensive_profile(team, db_path):
         wr2_name = wr_df.iloc[1]["Player"] if len(wr_df) > 1 else wr_df.iloc[0]["Player"]
         te_name = te_df.iloc[0]["Player"] if not te_df.empty else wr1_name
 
-        # Isolate rows
         p_row = passing_df[passing_df["Player"] == qb_name].iloc[0]
         ap_row = adv_pass_df[adv_pass_df["Player"] == qb_name].iloc[0]
         rush_row = adv_rush_df[adv_rush_df["Player"] == qb_name].iloc[0]
@@ -66,7 +63,6 @@ def calculate_offensive_profile(team, db_path):
 
         rb_rush_row = adv_rush_df[adv_rush_df["Player"] == rb_name].iloc[0]
         rb_recv_row = adv_recv_df[adv_recv_df["Player"] == rb_name].iloc[0]
-
         wr1_row = adv_recv_df[adv_recv_df["Player"] == wr1_name].iloc[0]
         wr2_row = adv_recv_df[adv_recv_df["Player"] == wr2_name].iloc[0]
         te_row = adv_recv_df[adv_recv_df["Player"] == te_name].iloc[0]
@@ -87,9 +83,7 @@ def calculate_offensive_profile(team, db_path):
         print(f"TE:  {te_rating}")
         print(f"OL:  {ol_rating}")
 
-        qb_rush_rating = max(
-            rate_qb(p_row, ap_row, rush_row) - rate_qb(p_row, ap_row, None), 0
-        )
+        qb_rush_rating = max(rate_qb(p_row, ap_row, rush_row) - rate_qb(p_row, ap_row, None), 0)
         qb_pass_rating = rate_qb(p_row, ap_row, None)
 
         print("\n📈 SCORING, RUSHING, PASSING BREAKDOWN\n")
@@ -105,6 +99,21 @@ def calculate_offensive_profile(team, db_path):
         print(f"Passing Offense: {passing}")
         print(f"Overall Offense: {overall}")
 
+        # Make values globally accessible
+        globals().update({
+            'qb_name': qb_name,
+            'rb_name': rb_name,
+            'wr1_name': wr1_name,
+            'wr2_name': wr2_name,
+            'te_name': te_name,
+            'ol_rating': ol_rating,
+            'qb_rating': qb_rating,
+            'rb_rating': rb_rating,
+            'wr1_rating': wr1_rating,
+            'wr2_rating': wr2_rating,
+            'te_rating': te_rating
+        })
+
         return {
             "scoring": scoring,
             "rushing": rushing,
@@ -118,7 +127,26 @@ def calculate_offensive_profile(team, db_path):
     finally:
         conn.close()
 
+
 if __name__ == "__main__":
-    db_path = "/Users/calebbanks/NFL_predict/Database/nfl_player_data.db"
+    db_path = "Database/nfl_player_data.db"
     team = input("Enter team (e.g. 'lions'): ").strip().lower()
     calculate_offensive_profile(team, db_path)
+# --- Top 3 Offensive Contributors ---
+try:
+    contributions = [
+        (qb_name, "QB", qb_rating),
+        (rb_name, "RB", rb_rating),
+        (wr1_name, "WR1", wr1_rating),
+        (wr2_name, "WR2", wr2_rating),
+        (te_name, "TE", te_rating),
+        ("Offensive Line", "OL", ol_rating)
+    ]
+
+    top_3_offense = sorted(contributions, key=lambda x: x[2], reverse=True)[:3]
+
+    print("\nTop 3 Offensive Contributors:")
+    for name, position, score in top_3_offense:
+        print(f"{name} ({position}): {score}")
+except NameError:
+    print("⚠️ Warning: Positional ratings not available in global scope. Run the main function first.")

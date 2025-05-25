@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Minkah Fitzpatrick,28.0,SS,17,17,1,25,0,25,4,1,0,0,0,0,0.0,96,62,34,1,0,0,PB
-2.0,Cameron Heyward,35.0,LDE,17,17,0,0,0,0,11,0,0,0,0,0,8.0,71,35,36,12,20,0,"PB,AP-1,AP DPoY-13,AP CPoY-9"
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Patrick Queen,25.0,LILB,17,17,0,0,0,0,7,2,0,1,0,0,1.0,129,65,64,6,5,0,PB
 4.0,T.J. Watt,30.0,LOLB,17,17,0,0,0,0,4,6,0,2,0,0,11.5,61,40,21,19,27,0,"PB,AP-2,AP DPoY-4"
 5.0,Joey Porter Jr.,24.0,RCB,16,16,1,16,0,16,7,0,0,0,0,0,0.0,70,53,17,2,0,0,
@@ -45,3 +43,5 @@
 44.0,Jaylen Warren,26.0,RB,15,0,0,0,0,0,0,0,2,3,0,0,0.0,0,0,0,0,0,0,
 45.0,Rodney Williams,26.0,TE,6,0,0,0,0,0,0,0,0,0,0,0,0.0,1,1,0,0,0,0,
 ,Team Totals,,,17,17,17,209,0,49,76,22,22,27,-3,1,40.0,1091,664,427,83,105,0,
+2.0,Cameron Heyward,35.0,LDE,17,17,0,0,0,0,11,0,0,0,0,0,8.0,71,35,36,12,20,0,"PB,AP-1,AP DPoY-13,AP CPoY-9"
+1.0,Minkah Fitzpatrick,28.0,SS,17,17,1,25,0,25,4,1,0,0,0,0,0.0,96,62,34,1,0,0,PB

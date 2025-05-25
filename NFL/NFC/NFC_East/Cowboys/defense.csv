@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Malik Hooker,28.0,SS,17,17,2,20,0,21,5,0,0,0,0,0,0.0,81,51,30,3,1,0,
-2.0,Osa Odighizuwa,26.0,LDT,17,17,0,0,0,0,1,1,0,0,0,0,4.5,47,25,22,5,23,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Mazi Smith,23.0,RDT,17,17,0,0,0,0,0,0,0,0,0,0,1.0,41,22,19,4,3,0,
 4.0,Donovan Wilson,29.0,FS,17,17,1,0,0,0,5,2,0,1,0,0,4.5,82,44,38,6,4,0,
 5.0,Cooper Beebe,23.0,C,16,16,0,0,0,0,0,0,1,1,-12,0,0.0,0,0,0,0,0,0,
@@ -54,3 +52,5 @@
 53.0,Carlos Watkins,31.0,DE,15,0,0,0,0,0,0,0,0,0,0,0,0.0,12,4,8,0,0,0,
 54.0,Tyrus Wheat,25.0,DE,8,0,0,0,0,0,0,0,0,0,0,0,0.5,14,6,8,1,1,0,
 ,Team Totals,,,17,17,13,97,1,23,70,18,29,23,-27,0,51.0,1116,671,445,70,105,0,
+1.0,Malik Hooker,28.0,SS,17,17,2,20,0,21,5,0,0,0,0,0,0.0,81,51,30,3,1,0,
+2.0,Osa Odighizuwa,26.0,LDT,17,17,0,0,0,0,1,1,0,0,0,0,4.5,47,25,22,5,23,0,

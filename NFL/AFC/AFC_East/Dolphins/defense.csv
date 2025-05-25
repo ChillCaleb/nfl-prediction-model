@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Aaron Brewer,27.0,C,17,17,0,0,0,0,0,0,1,1,-22,0,0.0,0,0,0,0,0,0,
-2.0,Jordyn Brooks,27.0,RILB,17,17,0,0,0,0,6,0,0,2,23,0,3.0,143,86,57,11,6,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Calais Campbell,38.0,NT,17,17,0,0,0,0,5,1,0,0,0,0,5.0,52,35,17,12,12,0,
 4.0,Robert Jones,25.0,LG,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
 5.0,Jalen Ramsey,30.0,LCB,17,17,2,7,0,7,11,0,0,0,0,0,1.0,60,39,21,6,4,0,
@@ -54,3 +52,5 @@
 53.0,Channing Tindall,24.0,LB,11,0,0,0,0,0,0,0,0,0,0,0,0.0,5,4,1,0,0,0,
 54.0,Jeff Wilson,29.0,RB,9,0,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
 ,Team Totals,,,17,17,10,21,0,7,69,8,28,20,-38,0,35.0,1023,612,411,83,81,0,
+1.0,Aaron Brewer,27.0,C,17,17,0,0,0,0,0,0,1,1,-22,0,0.0,0,0,0,0,0,0,
+2.0,Jordyn Brooks,27.0,RILB,17,17,0,0,0,0,6,0,0,2,23,0,3.0,143,86,57,11,6,0,

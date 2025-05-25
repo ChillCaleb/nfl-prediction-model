@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Brian Burns,26.0,LOLB,17,17,0,0,0,0,8,2,0,0,0,0,8.5,71,42,29,17,18,0,
-2.0,Greg Van Roten,34.0,RG,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Jason Pinnock,25.0,SS,16,16,0,0,0,0,1,0,0,0,0,0,3.0,85,50,35,4,3,0,
 4.0,Jermaine Eluemunor,30.0,RT,15,15,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,
 5.0,Rakeem Nunez-Roches,31.0,LDE,15,15,0,0,0,0,2,0,0,0,0,0,2.0,52,14,38,2,6,0,
@@ -54,3 +52,5 @@
 53.0,Armon Watts,28.0,DT,5,0,0,0,0,0,0,0,0,0,0,0,0.0,7,3,4,2,0,0,
 54.0,Divaad Wilson,24.0,CB,3,0,0,0,0,0,1,0,0,0,0,0,0.0,5,4,1,0,0,0,
 ,Team Totals,,,17,17,5,52,0,26,60,16,22,19,1,0,45.0,1172,650,522,96,94,0,
+1.0,Brian Burns,26.0,LOLB,17,17,0,0,0,0,8,2,0,0,0,0,8.5,71,42,29,17,18,0,
+2.0,Greg Van Roten,34.0,RG,17,17,0,0,0,0,0,0,0,1,0,0,0.0,0,0,0,0,0,0,

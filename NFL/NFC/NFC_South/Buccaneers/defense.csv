@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Lavonte David,34.0,LILB,17,17,1,7,0,7,6,3,0,1,0,0,5.5,122,76,46,9,6,0,
-2.0,YaYa Diaby,25.0,OLB,17,17,0,0,0,0,0,1,0,1,0,0,4.5,54,39,15,13,20,0,
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Baker Mayfield,29.0,QB,17,17,0,0,0,0,0,0,13,8,-18,0,0.0,0,0,0,0,0,0,"PB,AP MVP-11,AP OPoY-11"
 4.0,Zyon McCollum,25.0,RCB,17,17,2,4,0,4,17,0,0,1,0,0,0.0,82,55,27,1,0,0,
 5.0,Vita Vea,29.0,NT,16,16,0,0,0,0,1,0,0,0,0,0,7.0,42,27,15,10,13,0,PB
@@ -48,3 +46,5 @@
 47.0,Tavierre Thomas,28.0,CB,17,0,0,0,0,0,0,0,0,0,0,0,0.0,14,8,6,0,0,0,
 48.0,Sean Tucker,23.0,RB,17,0,0,0,0,0,0,0,1,0,0,0,0.0,4,3,1,0,0,0,
 ,Team Totals,,,17,17,7,28,0,17,62,16,26,28,41,1,46.0,1059,673,386,81,113,0,
+1.0,Lavonte David,34.0,LILB,17,17,1,7,0,7,6,3,0,1,0,0,5.5,122,76,46,9,6,0,
+2.0,YaYa Diaby,25.0,OLB,17,17,0,0,0,0,0,1,0,1,0,0,4.5,54,39,15,13,20,0,

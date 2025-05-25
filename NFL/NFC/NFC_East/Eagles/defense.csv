@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Jordan Davis,24.0,RDT,17,17,0,0,0,0,2,0,0,1,0,0,1.0,27,15,12,3,1,0,
-2.0,Saquon Barkley,27.0,RB,16,16,0,0,0,0,0,0,2,2,0,0,0.0,0,0,0,0,0,0,"PB,AP-1,AP MVP-3,AP OPoY-1,AP CPoY-14"
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Zack Baun,28.0,LLB,16,16,1,0,0,0,4,5,0,1,0,0,3.5,151,93,58,11,5,0,"PB,AP-1,AP DPoY-5"
 4.0,C.J. Gardner-Johnson,27.0,SS,16,16,6,116,1,69,12,1,0,0,0,0,0.0,59,35,24,2,0,0,AP CPoY-11
 5.0,Cam Jurgens,25.0,C,16,16,0,0,0,0,0,0,1,1,0,0,0.0,0,0,0,0,0,0,PB
@@ -44,3 +42,5 @@
 43.0,Eli Ricks,23.0,CB,7,0,0,0,0,0,0,0,0,0,0,0,0.0,2,1,1,0,0,0,
 44.0,Andre' Sam,25.0,S,1,0,0,0,0,0,0,0,0,0,0,0,0.0,1,0,1,0,0,0,
 ,Team Totals,,,17,17,13,166,1,69,90,22,19,22,-4,0,41.0,1024,628,396,81,87,0,
+1.0,Jordan Davis,24.0,RDT,17,17,0,0,0,0,2,0,0,1,0,0,1.0,27,15,12,3,1,0,
+2.0,Saquon Barkley,27.0,RB,16,16,0,0,0,0,0,0,2,2,0,0,0.0,0,0,0,0,0,0,"PB,AP-1,AP MVP-3,AP OPoY-1,AP CPoY-14"

@@ -1,6 +1,4 @@
-"('Unnamed: 0_level_0', 'Rk')","('Unnamed: 1_level_0', 'Player')","('Unnamed: 2_level_0', 'Age')","('Unnamed: 3_level_0', 'Pos')","('Unnamed: 4_level_0', 'G')","('Unnamed: 5_level_0', 'GS')","('Def Interceptions', 'Int')","('Def Interceptions', 'Yds')","('Def Interceptions', 'IntTD')","('Def Interceptions', 'Lng')","('Def Interceptions', 'PD')","('Fumbles', 'FF')","('Fumbles', 'Fmb')","('Fumbles', 'FR')","('Fumbles', 'Yds')","('Fumbles', 'FRTD')","('Unnamed: 16_level_0', 'Sk')","('Tackles', 'Comb')","('Tackles', 'Solo')","('Tackles', 'Ast')","('Tackles', 'TFL')","('Tackles', 'QBHits')","('Unnamed: 22_level_0', 'Sfty')","('Unnamed: 23_level_0', 'Awards')"
-1.0,Bryan Cook,25.0,FS,17,17,2,0,0,0,5,0,0,0,0,0,0.0,78,55,23,1,0,0,
-2.0,Creed Humphrey,25.0,C,17,17,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,"PB,AP-1"
+Rk,Player,Age,Pos,G,GS,Int,Yds,IntTD,Lng,PD,FF,Fmb,FR,Yds_Fum,FRTD,Sk,Comb,Solo,Ast,TFL,QBHits,Sfty,Awards
 3.0,Nick Bolton,24.0,LLB,16,16,1,0,0,0,6,1,0,2,0,0,3.0,106,73,33,11,7,0,
 4.0,Travis Kelce,35.0,TE,16,16,0,0,0,0,0,0,2,0,0,0,0.0,0,0,0,0,0,0,PB
 5.0,Patrick Mahomes,29.0,QB,16,16,0,0,0,0,0,0,2,1,0,0,0.0,0,0,0,0,0,0,"AP MVP-6,AP OPoY-17"
@@ -46,3 +44,5 @@
 45.0,Josh Uche,26.0,DE,6,0,0,0,0,0,0,0,0,0,0,0,0.0,10,7,3,0,0,0,
 46.0,James Winchester,35.0,LS,17,0,0,0,0,0,0,0,0,0,0,0,0.0,3,0,3,0,0,0,
 ,Team Totals,,,17,17,13,102,0,47,71,14,10,13,48,1,39.0,1040,665,375,87,112,0,
+1.0,Bryan Cook,25.0,FS,17,17,2,0,0,0,5,0,0,0,0,0,0.0,78,55,23,1,0,0,
+2.0,Creed Humphrey,25.0,C,17,17,0,0,0,0,0,0,1,0,0,0,0.0,0,0,0,0,0,0,"PB,AP-1"
