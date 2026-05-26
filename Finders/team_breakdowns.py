@@ -1,9 +1,16 @@
 import sqlite3
 import pandas as pd
-import requests
 import time
+import os
+import sys
 
-GROQ_API_KEY = "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"
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if ROOT_DIR not in sys.path:
+    sys.path.append(ROOT_DIR)
+
+from groq_utils import get_groq_api_keys, get_groq_model, post_groq_chat_completion
+
+GROQ_MODEL = get_groq_model()
 
 # === Setup ===
 player_db = sqlite3.connect("Database/nfl_player_data.db")
@@ -16,6 +23,9 @@ def slow_print(text, delay=0.04):
     print()
 
 def generate_team_blurb(team_name, team_stats, top_offense, top_defense):
+    if not get_groq_api_keys():
+        return "[Team breakdown could not be generated because no Groq API key is set.]"
+
     off_stats = team_stats.get("off", {})
     def_stats = team_stats.get("def", {})
     off_players = "\n".join([f"- {row['player']} ({row['pos']}): {row['archetype']}" for _, row in top_offense.iterrows()])
@@ -36,17 +46,18 @@ Offensive Team Stats:
 Do not mention any numerical values or positions directly. Use the archetypes and data to describe the team's overall tendencies, synergy, standout traits, and schematic identity. Write in complete paragraphs with a confident, analytical tone.
 """
 
-    headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
-        "Content-Type": "application/json"
-    }
     payload = {
-        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "model": GROQ_MODEL,
         "messages": [
             {"role": "user", "content": summary}
         ]
     }
-    response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=payload)
+    try:
+        response, _ = post_groq_chat_completion(payload)
+    except RuntimeError as e:
+        print("\n❌ API error:", e)
+        return "[Team breakdown could not be generated due to API error.]"
+
     try:
         return response.json()["choices"][0]["message"]["content"].strip()
     except Exception as e:

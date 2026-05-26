@@ -2,26 +2,26 @@ import os
 import sys
 import sqlite3
 import pandas as pd
-import requests
 import time
 import warnings
-from dotenv import load_dotenv
 
 # Suppress pandas FutureWarnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Use player-level blurb generator
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from groq_utils import get_groq_api_keys, get_groq_model, post_groq_chat_completion
 from Finders.player_breakdown import get_player_blurb  
 
-
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_MODEL = get_groq_model()
 
 PLAYER_DB = "Database/nfl_player_data.db"
 RATING_DB = "Database/nfl_ratings.db"
 
 def generate_room_blurb(position, team, player_blurbs, team_stats):
+    if not get_groq_api_keys():
+        return "[Room breakdown could not be generated because no Groq API key is set.]"
+
     summary = "\n".join([f"{k}: {v}" for k, v in team_stats.items() if isinstance(v, (int, float))])
     player_descriptions = "\n\n".join([f"{pb['Blurb']}" for pb in player_blurbs])
 
@@ -45,17 +45,18 @@ Guidelines:
 - No emojis, no bullet points.
 """
 
-    headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
-        "Content-Type": "application/json"
-    }
     payload = {
-        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "model": GROQ_MODEL,
         "messages": [
             {"role": "user", "content": prompt}
         ]
     }
-    response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=payload)
+    try:
+        response, _ = post_groq_chat_completion(payload)
+    except RuntimeError as e:
+        print("\n❌ API error:", e)
+        return "[Room breakdown could not be generated due to API error.]"
+
     try:
         return response.json()["choices"][0]["message"]["content"].strip()
     except Exception as e:

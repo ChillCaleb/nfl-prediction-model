@@ -1,5 +1,5 @@
-import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 import joblib
@@ -13,10 +13,23 @@ def train_model():
     X_model = X.drop(columns=["team_a", "team_b"])
 
     # Train/test split
-    X_train, X_test, y_train, y_test = train_test_split(X_model, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X_model,
+        y,
+        test_size=0.2,
+        random_state=42,
+        stratify=y,
+    )
 
     # Train model
-    model = RandomForestClassifier(n_estimators=200, max_depth=12, random_state=42)
+    base_model = RandomForestClassifier(
+        n_estimators=200,
+        max_depth=6,
+        min_samples_leaf=8,
+        class_weight="balanced",
+        random_state=42,
+    )
+    model = CalibratedClassifierCV(base_model, method="sigmoid", cv=5)
     model.fit(X_train, y_train)
 
     # Evaluate

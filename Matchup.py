@@ -2,12 +2,13 @@ import sqlite3
 import io
 import sys
 from contextlib import redirect_stdout
-import requests
-import os
 import time
 
 from Finders.position_rooms import analyze_positional_room
 from Finders.team_breakdowns import run_team_breakdown
+from groq_utils import get_groq_api_keys, get_groq_model, post_groq_chat_completion
+
+GROQ_MODEL = get_groq_model()
 
 # Custom matchup probability functions (logistic-style)
 def unit_advantage_prob(offense_rating, defense_rating, scale=15):
@@ -16,6 +17,15 @@ def unit_advantage_prob(offense_rating, defense_rating, scale=15):
 
 def matchup_win_probability(team1_total, team2_total, scale=20):
     return 1 / (1 + 10 ** ((team2_total - team1_total) / scale))
+
+DISPLAY_PROBABILITY_FLOOR = 0.005
+
+def bound_probability(probability, floor=DISPLAY_PROBABILITY_FLOOR):
+    probability = float(probability)
+    return min(max(probability, floor), 1 - floor)
+
+def format_probability(probability, precision=1):
+    return f"{bound_probability(probability):.{precision}%}"
 
 def slow_print(text, delay=0.04):
     for word in text.split():
@@ -80,20 +90,21 @@ Avoid listing stats directly. Be concise, insightful, and matchup-specific. High
 ---
 {summary_text}
 """
-    groq_key = os.getenv("GROQ_API_KEY")
-    if not groq_key:
-        print("GROQ API key not found.")
+    if not get_groq_api_keys():
+        print("GROQ API key not found. Add it to .env, or set GROQ_API_KEY_FALLBACK / GROQ_API_KEYS.")
         return
 
-    res = requests.post("https://api.groq.com/openai/v1/chat/completions",
-        headers={"Authorization": f"Bearer {groq_key}"},
-        json={
-            "model": "llama3-70b-8192",
+    try:
+        res, key_source = post_groq_chat_completion({
+            "model": GROQ_MODEL,
             "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.5
-        }
-    )
-    print("\n================ AI MATCHUP SUMMARY ================")
+            "temperature": 0.5,
+        })
+    except RuntimeError as exc:
+        print(f"❌ Error generating Groq summary: {exc}")
+        return
+
+    print(f"\n================ AI MATCHUP SUMMARY ({key_source}) ================")
     try:
         slow_print(res.json()["choices"][0]["message"]["content"].strip())
     except Exception as e:
@@ -112,7 +123,7 @@ def compare_matchup(team1_name, team2_name):
     win_prob = matchup_win_probability(team1['overall'], team2['overall'])
     winner = team1_name if win_prob > 0.5 else team2_name
     summary.append(f"🏆 Predicted Winner: {winner.upper()}")
-    summary.append(f"📊 Win Probability: {team1_name} {round(win_prob*100)}% | {team2_name} {round((1-win_prob)*100)}%\n")
+    summary.append(f"📊 Win Probability: {team1_name} {format_probability(win_prob)} | {team2_name} {format_probability(1-win_prob)}\n")
 
     rush_1v2 = unit_advantage_prob(team1['rush_rating'], team2['run_defense'])
     pass_1v2 = unit_advantage_prob(team1['pass_rating'], team2['pass_defense'])
@@ -123,12 +134,12 @@ def compare_matchup(team1_name, team2_name):
     score_2v1 = unit_advantage_prob(team2['score_rating'], team1['def_score'])
 
     summary.append("------ UNIT MATCHUP BREAKDOWNS ------")
-    summary.append(f"{team1_name} RUSH OFF vs {team2_name} RUSH DEF → {round(rush_1v2 * 100)}% advantage")
-    summary.append(f"{team1_name} PASS OFF vs {team2_name} PASS DEF → {round(pass_1v2 * 100)}% advantage")
-    summary.append(f"{team1_name} SCORING vs {team2_name} SCORE DEF → {round(score_1v2 * 100)}% advantage\n")
-    summary.append(f"{team2_name} RUSH OFF vs {team1_name} RUSH DEF → {round(rush_2v1 * 100)}% advantage")
-    summary.append(f"{team2_name} PASS OFF vs {team1_name} PASS DEF → {round(pass_2v1 * 100)}% advantage")
-    summary.append(f"{team2_name} SCORING vs {team1_name} SCORE DEF → {round(score_2v1 * 100)}% advantage\n")
+    summary.append(f"{team1_name} RUSH OFF vs {team2_name} RUSH DEF → {format_probability(rush_1v2)} advantage")
+    summary.append(f"{team1_name} PASS OFF vs {team2_name} PASS DEF → {format_probability(pass_1v2)} advantage")
+    summary.append(f"{team1_name} SCORING vs {team2_name} SCORE DEF → {format_probability(score_1v2)} advantage\n")
+    summary.append(f"{team2_name} RUSH OFF vs {team1_name} RUSH DEF → {format_probability(rush_2v1)} advantage")
+    summary.append(f"{team2_name} PASS OFF vs {team1_name} PASS DEF → {format_probability(pass_2v1)} advantage")
+    summary.append(f"{team2_name} SCORING vs {team1_name} SCORE DEF → {format_probability(score_2v1)} advantage\n")
 
     summary_block = "\n".join(summary)
     full = header + "\n" + subhead + "\n" + summary_block + "\n==============================================================="
@@ -156,16 +167,16 @@ def compare_matchup(team1_name, team2_name):
 
     matchup_summary_text = f"""
 Matchup: {team1_name} vs {team2_name}
-Predicted Winner: {winner} ({round(win_prob*100)}%)
+Predicted Winner: {winner} ({format_probability(win_prob)})
 
 🔹 Matchup Edges:
-{team1_name} RUSH OFF vs {team2_name} RUSH DEF → {round(rush_1v2 * 100)}%
-{team1_name} PASS OFF vs {team2_name} PASS DEF → {round(pass_1v2 * 100)}%
-{team1_name} SCORING vs {team2_name} SCORE DEF → {round(score_1v2 * 100)}%
+{team1_name} RUSH OFF vs {team2_name} RUSH DEF → {format_probability(rush_1v2)}
+{team1_name} PASS OFF vs {team2_name} PASS DEF → {format_probability(pass_1v2)}
+{team1_name} SCORING vs {team2_name} SCORE DEF → {format_probability(score_1v2)}
 
-{team2_name} RUSH OFF vs {team1_name} RUSH DEF → {round(rush_2v1 * 100)}%
-{team2_name} PASS OFF vs {team1_name} PASS DEF → {round(pass_2v1 * 100)}%
-{team2_name} SCORING vs {team1_name} SCORE DEF → {round(score_2v1 * 100)}%
+{team2_name} RUSH OFF vs {team1_name} RUSH DEF → {format_probability(rush_2v1)}
+{team2_name} PASS OFF vs {team1_name} PASS DEF → {format_probability(pass_2v1)}
+{team2_name} SCORING vs {team1_name} SCORE DEF → {format_probability(score_2v1)}
 
 🔹 Positional Rooms:
 {team1_name} Room: {room1} | Top Player: {player1}

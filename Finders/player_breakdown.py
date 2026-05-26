@@ -1,13 +1,15 @@
 import sqlite3
 import pandas as pd
-import requests
 import time
 import os
 import sys
-import os, sys
-
 import importlib.util
-import os
+
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if ROOT_DIR not in sys.path:
+    sys.path.append(ROOT_DIR)
+
+from groq_utils import get_groq_api_keys, get_groq_model, post_groq_chat_completion
 
 spec = importlib.util.spec_from_file_location("archetype_rules", os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Legacy_Files", "Engine", "archetype_rules.py")))
 archetype_rules = importlib.util.module_from_spec(spec)
@@ -16,10 +18,14 @@ get_archetype = archetype_rules.get_archetype
 
 PLAYER_DB = "Database/nfl_player_data.db"
 RATING_DB = "Database/nfl_ratings.db"
-GROQ_API_KEY = "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"
+
+GROQ_MODEL = get_groq_model()
 
 
 def generate_llm_blurb(player_name, archetype, stats, ratings):
+    if not get_groq_api_keys():
+        return "[Scouting blurb could not be generated because no Groq API key is set.]"
+
     stat_lines = "\n".join([f"{k}: {v}" for k, v in stats.items()])
     rating_lines = "\n".join([f"{k}: {v}" for k, v in ratings.items()])
 
@@ -45,17 +51,18 @@ Stats:
 Write in paragraph format with no emojis or section headers.
 """
 
-    headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
-        "Content-Type": "application/json"
-    }
     payload = {
-        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "model": GROQ_MODEL,
         "messages": [
             {"role": "user", "content": prompt}
         ]
     }
-    response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=payload)
+    try:
+        response, _ = post_groq_chat_completion(payload)
+    except RuntimeError as e:
+        print("\n❌ API error:", e)
+        return "[Scouting blurb could not be generated due to API error.]"
+
     try:
         return response.json()["choices"][0]["message"]["content"].strip()
     except Exception as e:
