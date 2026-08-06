@@ -124,7 +124,7 @@ def _call_groq_cached(
     model: str,
     key_sources: tuple[str, ...],
 ) -> str:
-    response, key_source = post_groq_chat_completion(
+    response, _key_source = post_groq_chat_completion(
         {
             "model": model,
             "messages": [{"role": "user", "content": prompt}],
@@ -136,7 +136,7 @@ def _call_groq_cached(
         content = response.json()["choices"][0]["message"]["content"].strip()
     except Exception as exc:
         raise RuntimeError(f"Groq returned an unexpected response: {response.text}") from exc
-    return f"{content}\n\nSource: {key_source}"
+    return content
 
 
 def _call_groq(prompt: str, temperature: float = 0.45) -> str:
