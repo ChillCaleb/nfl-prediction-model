@@ -10,7 +10,7 @@ ROOT_ENV = ROOT_DIR / ".env"
 FINDERS_ENV = ROOT_DIR / "Finders" / ".env"
 
 GROQ_CHAT_URL = "https://api.groq.com/openai/v1/chat/completions"
-DEFAULT_GROQ_MODEL = "llama-3.3-70b-versatile"
+DEFAULT_GROQ_MODEL = "openai/gpt-oss-20b"
 KEY_VARIABLES = (
     "GROQ_API_KEY",
     "GROQ_API_KEY_FALLBACK",
